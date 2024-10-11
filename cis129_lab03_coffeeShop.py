@@ -1,35 +1,52 @@
-def calculate_total():
-    #we are setting the prices in this section 
-    coffee_price = 5.00
-    muffin_price = 4.00
-    tax_rate = 0.06
-    
-    #User inputs numbers here
-    print("****************************")
-    print("My Coffee and Muffin Shop")
-    num_coffees = int(input("Enter the number of coffees: "))
-    num_muffins = int(input("Enter the number of muffins: "))
-    print("****************************")
+"""
+Coffee Shop Simulator
 
-    #calculate subtotal
-    subtotal_coffees = num_coffees * coffee_price
-    subtotal_muffins = num_muffins * muffin_price
+This program simulates a coffee and muffin shop where the user can input the number of coffees 
+and muffins they wish to purchase. The program calculates the subtotal, applies a 6% tax, 
+and displays a formatted receipt.
+
+Prices:
+- Coffee: $5.00 each
+- Muffin: $4.00 each
+- Tax: 6% of the subtotal
+
+Vicente Miranda Leon
+October 3rd, 2024
+"""
+
+
+COFFEE_PRICE = 5.00
+MUFFIN_PRICE = 4.00
+TAX_RATE = 0.06
+
+def main():
+    
+    print("***************************************")
+    print("My Coffee and Muffin Shop")
+
+    
+    num_coffees = int(input("Number of coffees bought? "))
+    num_muffins = int(input("Number of muffins bought? "))
+
+    
+    subtotal_coffees = num_coffees * COFFEE_PRICE
+    subtotal_muffins = num_muffins * MUFFIN_PRICE
     subtotal = subtotal_coffees + subtotal_muffins
 
-    #tax calculation
-    tax = subtotal * tax_rate
-
-    #total calculation
+    
+    tax = subtotal * TAX_RATE
     total = subtotal + tax
 
-#display receipt
+    
+    print("***************************************")
     print("My Coffee and Muffin Shop Receipt")
-    print(f"{num_coffees} Coffee at ${coffee_price} each: ${subtotal_coffees:.2f}")
-    print(f"{num_muffins} Muffins at ${muffin_price} each: ${subtotal_muffins:.2f}")
-    print(f"6% tax: ${tax:.2f}")
+    print(f"{num_coffees} Coffee at ${COFFEE_PRICE:.2f} each: $ {subtotal_coffees:.2f}")
+    print(f"{num_muffins} Muffins at ${MUFFIN_PRICE:.2f} each: $ {subtotal_muffins:.2f}")
+    print(f"6% tax: $ {tax:.2f}")
     print("---------")
-    print(f"Total: ${total:.2f}")
+    print(f"Total: $ {total:.2f}")
     print("***************************************")
 
-#run program
-    calculate_total
+
+if __name__ == "__main__":
+    main()

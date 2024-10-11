@@ -10,7 +10,7 @@ Prices:
 - Muffin: $4.00 each
 - Tax: 6% of the subtotal
 
-Vicente Miranda Leon
+Author: Vicente Miranda Leon Jr
 October 3rd, 2024
 """
 
@@ -50,3 +50,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
